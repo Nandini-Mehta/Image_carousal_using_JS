@@ -1,0 +1,80 @@
+body{
+    overflow: hidden;
+    background-color: rgba(193, 195, 197, 0.514);
+}
+
+h1{
+    text-align: center;
+    color: rgb(18, 39, 99);
+    font-family: 'Yeseva One', cursive;
+    font-size: 5vh;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    border-radius: rem;
+}
+.im{
+    display: none;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    height: 60vh;
+}
+
+#left, #right{
+    position: absolute;
+    cursor: pointer;
+    background-color:rgba(255, 255, 255, 0.411);
+    padding: 5px;
+    border-radius: 1rem;
+    user-select: none;
+    transition: 0.5s ease;
+}
+
+#right{
+    right: 0px;
+    margin-right: 5px;
+}
+#left{
+    left: 0px;
+    margin-left: 5px;
+}
+
+#left:hover ,#right:hover{
+    background-color:white;
+}
+
+.dots{
+    text-align: center;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: rgba(96, 99, 100, 0.651);
+    border-radius: 50%;
+    margin: 10px 5px;   
+    transition: background-color 0.5s ease;
+} 
+.active{
+    background-color: #616060;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+} 
